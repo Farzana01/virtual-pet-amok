@@ -74,8 +74,7 @@ public class VirtualPetShelter {
 		litterBox += 10;
 	}
 
-	// Tick method (**ASK BRIAN WHY WE ARE RETURNING CAGE MESSINESS FOR ORGANIC
-	// DOGS**)
+	// Tick method
 	void tickAllPets() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof OrgCat) {
