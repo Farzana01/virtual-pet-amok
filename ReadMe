@@ -1,2 +1,26 @@
-# Virtual_Pet
-Create a virtual pet application. This is your version of a Tamagotchi or DigiPet! This might seem like a daunting task, but we can break it down.
+Virtual-Pet-Amok
+
+Virtual-pet-amok
+
+This program has two types of pets. They are either organic or robotic. 
+
+The files are:
+Cat - abstract class
+Dog - abstract class
+OrganicPet - interface
+OrgCat - inheritance
+OrgDog - inheritance
+RoboCat - inheritance
+RoboDog - inheritance
+RoboticPet - interface
+VirtualPet - abstract class which houses all abstract methods
+VirtualPetApp - main method
+VirtualPetShelter - contains one Map of Virtual pet
+
+We are expected to model a shelter that houses both dogs and cats. They are either robotic or organic. Organic pets behave the same way as live animals- they feed, walk, play and soil cages. Robotic pets only play and maintenance is required if running low on oil.
+
+All classes have encapsulared instance variables. They have visibility modifiers to methods only used internally.
+
+
+
+
