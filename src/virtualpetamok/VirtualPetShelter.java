@@ -1,4 +1,4 @@
-package virtualpetamok;
+ package virtualpetamok;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -74,16 +74,17 @@ public class VirtualPetShelter {
 		litterBox += 10;
 	}
 
+
 	// Tick method
-	void tickAllPets() {
-		for (VirtualPet pet : pets()) {
-			if (pet instanceof OrgCat) {
-				litterBox += pet.tick();
-			} else if (pet instanceof OrganicPet) {
-				pet.tick();
+		void tickAllPets() {
+			for (VirtualPet pet : pets()) {
+				if (pet instanceof OrgCat) {
+					litterBox += ((OrgCat) pet).tick();
+				} else if (pet instanceof OrganicPet) {
+					((OrganicPet) pet).tick();
+				}
 			}
 		}
-	}
 
 	// Method returning collection of all pets in the shelter
 	public Collection<VirtualPet> pets() {

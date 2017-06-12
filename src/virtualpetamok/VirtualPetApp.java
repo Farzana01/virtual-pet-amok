@@ -17,6 +17,8 @@ public class VirtualPetApp {
 		shelter.intake(jess);
 		RoboticPet oly = new RoboCat("RoboCat", "A robotic cat");
 		shelter.intake(oly);
+		OrganicPet popo = new OrgKoalaStretch("Popo","Laziest koala in the world");
+		shelter.intake(popo);
 
 		boolean quit = false;
 
