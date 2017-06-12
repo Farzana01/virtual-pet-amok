@@ -33,6 +33,12 @@ public class OrgKoalaStretch extends Koala implements OrganicPet {
 		hunger += 10;
 		thirst += 10;
 	}
+	
+	@Override
+	public void treat() {
+		hunger -= 20;
+		mood += 10;
+	}
 
 	@Override
 	public String getName() {

@@ -5,7 +5,9 @@ public interface OrganicPet {
 	String getName();
 
 	void feed();
-
+	
+    void treat();
+	
 	void water();
 	
 	int tick();

@@ -19,6 +19,12 @@ public class OrgDog extends Dog implements OrganicPet {
 		mood += 10;
 		cageMessiness += 10;
 	}
+	
+	@Override
+	public void treat() {
+		hunger -= 20;
+		mood += 10;
+	}
 
 	public void water() {
 		thirst -= 20;

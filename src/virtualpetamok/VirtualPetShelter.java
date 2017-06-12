@@ -74,7 +74,6 @@ public class VirtualPetShelter {
 		litterBox += 10;
 	}
 
-
 	// Tick method
 		void tickAllPets() {
 			for (VirtualPet pet : pets()) {

@@ -16,6 +16,12 @@ public class OrgCat extends Cat implements OrganicPet {
 	}
 
 	@Override
+	public void treat() {
+		hunger -= 20;
+		mood += 10;
+	}
+	
+	@Override
 	public void water() {
 		thirst -= 20;
 		mood += 10;		

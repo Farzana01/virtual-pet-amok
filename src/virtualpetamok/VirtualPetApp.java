@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class VirtualPetApp {
 
+
 	public static void main(String[] args) {
 
 		VirtualPetShelter shelter = new VirtualPetShelter();
@@ -17,9 +18,9 @@ public class VirtualPetApp {
 		shelter.intake(jess);
 		RoboticPet oly = new RoboCat("RoboCat", "A robotic cat");
 		shelter.intake(oly);
-		OrganicPet popo = new OrgKoalaStretch("Popo","Laziest koala in the world");
+		OrganicPet popo = new OrgKoalaStretch("Popo", "Laziest koala in the world");
 		shelter.intake(popo);
-
+		
 		boolean quit = false;
 
 		do {
@@ -64,11 +65,12 @@ public class VirtualPetApp {
 				System.out.print("\n");
 
 			}
-			
+
 			writeLine("The litterbox is: " + shelter.getLitterBox());
 			writeLine("\nWhat would you like to do next?");
 			writeLine(
-					"\n1.Feed the organic pets \n2.Water the organic pets \n3.Play with a pet \n4.Adopt a pet \n5.Admit a pet \n6.Clean Cages \n7.Clean Litterbox \n8.Walk Dogs \n9.Maintain all RoboPets \n10.Do nothing \n11.Quit");
+					"\n1.Feed the organic pets \n2.Water the organic pets \n3.Play with a pet \n4.Adopt a pet \n5.Admit a pet \n6.Clean Cages \n7.Clean Litterbox \n8.Walk Dogs \n9.Maintain all RoboPets \n10. Give treats to all Organic pets \n11.Quit");
+
 			String response = input.nextLine();
 
 			switch (response) {
@@ -111,16 +113,16 @@ public class VirtualPetApp {
 						String description = input.nextLine();
 						OrganicPet pet = new OrgDog(name, description);
 						shelter.intake(pet);
-						writeLine("Thanks! We'll take good care of " + pet.getName()+".");
+						writeLine("Thanks! We'll take good care of " + pet.getName() + ".");
 					} else if (response3.equalsIgnoreCase("cat")) {
 						writeLine("Great! What is the cat's name?");
 						String name = input.nextLine();
-				
+
 						writeLine("Great! What is a short description of the cat?");
 						String description = input.nextLine();
 						OrganicPet pet = new OrgCat(name, description);
 						shelter.intake(pet);
-						writeLine("Thanks! We'll take good care of " + pet.getName()+".");
+						writeLine("Thanks! We'll take good care of " + pet.getName() + ".");
 					}
 
 				} else if (response2.equalsIgnoreCase("robotic")) {
@@ -135,7 +137,7 @@ public class VirtualPetApp {
 						String description = input.nextLine();
 						RoboticPet pet = new RoboDog(name, description);
 						shelter.intake(pet);
-						writeLine("Thanks! We'll take good care of " + pet.getName()+".");
+						writeLine("Thanks! We'll take good care of " + pet.getName() + ".");
 
 					} else if (response3.equalsIgnoreCase("cat")) {
 						writeLine("Great! What is the cat's name?");
@@ -144,7 +146,7 @@ public class VirtualPetApp {
 						String description = input.nextLine();
 						RoboticPet pet = new RoboCat(name, description);
 						shelter.intake(pet);
-						writeLine("Thanks! We'll take good care of " + pet.getName()+".");
+						writeLine("Thanks! We'll take good care of " + pet.getName() + ".");
 					}
 				}
 				break;
@@ -165,7 +167,39 @@ public class VirtualPetApp {
 				writeLine("You maintained all robotic pets!");
 				break;
 			case "10":
-				// tick
+				writeLine("What kind of pet would you like to treat?");
+				String response5 = input.next();
+				input.nextLine();
+
+				if (response5.equalsIgnoreCase("dog")) {
+					writeLine("Great! What would you like to give your " +response5 +" as a treat?");
+					String name = input.nextLine();
+                    
+                    for (VirtualPet treatPet : shelter.pets()) {
+        				if (treatPet instanceof OrgDog) {
+                            ((OrgDog) treatPet).treat();
+        				}
+        			}
+                    writeLine("ok! Your " +response5 +" will have " + name +".");
+				} else if (response5.equalsIgnoreCase("cat")) {
+					writeLine("Great! What would your "+response5 +" like to have as a treat?");
+					String name = input.nextLine();
+					 for (VirtualPet treatPet : shelter.pets()) {
+	        				if (treatPet instanceof OrgCat) {
+	                            ((OrgCat) treatPet).treat();
+	        				}
+	        			}
+					writeLine("ok! Your " +response5 +" will have " + name +".");
+				} else if (response5.equalsIgnoreCase("koala")) {
+					writeLine("Great! What would your "+response5  +"like to have as a treat?");
+					String name = input.nextLine();
+					 for (VirtualPet treatPet : shelter.pets()) {
+	        				if (treatPet instanceof OrgKoalaStretch) {
+	                            ((OrgKoalaStretch) treatPet).treat();
+	        				}
+	        			}
+					writeLine("ok! Your " +response5 +" will have " + name +".");
+				}	
 				break;
 			case "11":
 				writeLine("Nobody likes a quitter...");
