@@ -1,25 +1,17 @@
-Virtual-Pet-Amok
-
 Virtual-pet-amok
 
 This program has two types of pets. They are either organic or robotic. 
 
-The files are:
-Cat - abstract class
-Dog - abstract class
-OrganicPet - interface
-OrgCat - inheritance
-OrgDog - inheritance
-RoboCat - inheritance
-RoboDog - inheritance
-RoboticPet - interface
-VirtualPet - abstract class which houses all abstract methods
-VirtualPetApp - main method
-VirtualPetShelter - contains one Map of Virtual pet
+We are expected to model a shelter that houses both dogs and cats. They are either robotic or organic. 
+Organic pets behave the same way as live animals- they feed, walk, play and soil cages. 
+Robotic pets only play and maintenance is required if running low on oil.
 
-We are expected to model a shelter that houses both dogs and cats. They are either robotic or organic. Organic pets behave the same way as live animals- they feed, walk, play and soil cages. Robotic pets only play and maintenance is required if running low on oil.
+There are two test methods to check if the prgram is running without any errors.
 
-All classes have encapsulared instance variables. They have visibility modifiers to methods only used internally.
+Popo, the koala is the new type of pet in the shelter. Now, the shelter is offering the user to treat the pet of his or her choice. 
+The chart shows if the pets are treated and taken care of the proper way.
+
+
 
 
 
